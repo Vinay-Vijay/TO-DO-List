@@ -18,6 +18,10 @@ addButton.addEventListener('click', () => {
         const element = document.createElement('li')
         const textNode = document.createTextNode(inputValue)
         element.appendChild(textNode)
+        element.addEventListener('click', (e) => {
+            const userInput = window.prompt(`Are you sure that you want to remove "${chores}"`)
+            if(userInput==='YES') e.target.remove()
+        })
         list.appendChild(element)
     }
 })

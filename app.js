@@ -3,6 +3,7 @@ const input = document.querySelectorAll('input')[0]
 const taskInput = document.querySelectorAll('input')[1]
 const addButton = document.querySelectorAll('button')[0]
 var list = document.querySelectorAll('ul')[0]
+const count = document.querySelector('div.itemCount')
 var chores = []
 
 input.addEventListener('click', () => {
@@ -20,8 +21,15 @@ addButton.addEventListener('click', () => {
         element.appendChild(textNode)
         element.addEventListener('click', (e) => {
             const userInput = window.prompt(`Are you sure that you want to remove "${chores}"`)
-            if(userInput==='YES') e.target.remove()
+            if (userInput === 'YES') {
+                chores.indexOf(e)
+                e.target.remove()
+                chores.splice(e,1)
+                count.innerHTML = `${chores.length} items`
+            }
         })
         list.appendChild(element)
+        count.innerHTML = `${chores.length} items`
     }
+    
 })

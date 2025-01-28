@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO LIST</title>
-    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+    <script src="https://kit.fontawesome.com/b862bb0d81.js" crossorigin="anonymous"></script>
     <script defer src="./app.js"></script>
+    <title>ToDoList</title>
 </head>
+
 <body>
     <header></header>
-    <section>
-        <div class="topContainer">
-            <div>TO-DO List</div>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
-        <div class="middleContainer">
-            <input type="text" placeholder="Add tasks to the list...">
-            <button>
-                <img src="./assets/images/plus.png" alt="" class="addTaskButton">
-            </button>
-        </div>
-        <div class="bottomContainer">
-            <div class="taskBar">
-                <div class="itemCount">0 items</div>
-                <div class="taskStatus">
-                    <button class="taskStatusButton">All</button>
-                    <button class="taskStatusButton">Pending</button>
-                    <button class="taskStatusButton">Completed</button>
-                </div>
-                <div>
-                    <button class="clearButton">Clear</button>
-                </div>
+    <section class="list-container">
+        <div class="container">
+            <h2>
+                Todo List <input type="checkbox" id="switch" /><label class="switch-label" for="switch">Toggle</label>
+            </h2>
+        <div class="list">
+          <div class="list-item">
+            <input placeholder="Add a task to the List..." type="text" />
+            <i class="fas fa-plus"></i>
+          </div>
+          <ol class="todo-list">
+            <div class="taskbar list-item">
+              <div>5 Items left</div>
+              <div style="display: flex">
+                <div class="active" id="all">All</div>
+                <div id="pending">Pending</div>
+                <div id="complete">Completed</div>
+              </div>
+              <div class="clear">Clear</div>
             </div>
-            <div class="tasks">
-                <ul></ul>
-            </div>
+            <div class="items"></div>
+          </ol>
         </div>
+      </div>
     </section>
+
     <footer>
-        <div>
-            <a href="https://www.youtube.com/">Find Any</a>
-        </div>
-        <div>
-            <a href="https://www.instagram.com/"><img src="./assets/images/instagram.png" alt="" class="social"></a>
-            <a href="https://in.linkedin.com/"><img src="./assets/images/linkedin.png" alt="" class="social"></a>
-            <a href="https://github.com/"><img src="./assets/images/github.png" alt="" class="social"></a>
-        </div>
+      <div>
+        <a target="_blank" href="https://github.com/Vinay-Vijay"> Vinay Vijay</a>
+      </div>
+      <div>
+        <a href="https://github.com/Vinay-Vijay"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/vinay-vijay-7b566328b/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/Vinay-Vijay"> <i class="fa fa-github"></i></a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

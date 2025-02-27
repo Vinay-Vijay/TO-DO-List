@@ -157,8 +157,9 @@ const createListItem = (chore, id) => {
     </section>
     <div  class="list-input ${chore.status === 'complete' ? 'strike' : ''} " >${chore.name}</div>
     <i class="fas fa-times cross-${id}"></i>
-    <i class="fas fa-grip-lines"></i>
 `
+    //<i class="fas fa-grip-lines"></i>
+
 }
 
 const removeChore = (chore, id) => {
